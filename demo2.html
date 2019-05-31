@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang=en>
+<head>
+    <meta charset="utf-8">
+    <title>watch now</title>
+    <!-- <meta name="referrer" content="no-referrer"> -->
+    <!-- <meta name="origin" content="no-origin"/> -->
+    <style type="text/css">html, body {
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }</style>
+</head>
+<body>
+<div id="player">Loading the player...</div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://ssl.p.jwpcdn.com/player/v/8.8.6/jwplayer.js"></script>
+<script type="text/javascript">
+    jwplayer.key = "rQnYYD64MPHrZZCJWbV+/IeqHJ0iAP7KxPGVJ2Z4U2sR2VwruXu5VFoq/NKQJv0w";
+    jwplayer('player').setup({
+        playlist: [{
+            sources: [{"file":"https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8","type": "hls"}],
+			tracks: [
+				{
+					"default": true,
+					"file": "https://jwplay.ml/demo/sintel_en.srt",
+					"label": "English",
+					"kind": "captions"
+				}
+			],
+        }],
+        autostart: false,
+        androidhls: true,
+        hlshtml: true,
+        primary: "html5",
+        setFullscreen: true,
+        height: "100%",
+        width: "100%",
+        cast: {},
+        captions: {
+            color: "#f3f378",
+            fontSize: 16,
+            backgroundOpacity: 0,
+            fontfamily: "Helvetica",
+            edgeStyle: "raised"
+        }
+    });
+</script>
+</body>
+</html>
